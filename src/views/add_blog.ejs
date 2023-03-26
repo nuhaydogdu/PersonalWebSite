@@ -1,0 +1,41 @@
+<h1>Add New Blog</h1>
+
+
+<div class="text-center">
+    <% if ( locals.success_message !=undefined ) { %>
+        <%- include('./partials/_mesaj') %>
+            <% } %>
+</div>
+
+<div class="row ">
+
+<form action="/admin/add-blog" method="POST" enctype="multipart/form-data" >
+
+    <div class="column py-5">
+
+        <div class="col-md-10"> <label for="title">Başlık</label>
+            <input type="text" name="title" placeholder="Photo Title" class="bg-light form-control">
+        </div>
+
+        <div class="col-md-10 pt-md-0 pt-4 column py-3"> <label for="description">Blog İçerik</label>
+            <textarea rows="8" name="description" class="bg-light form-control"
+                placeholder="Photo Description"></textarea>
+        </div>
+
+        <div class="col-md-10 pt-md-0 pt-3"> <label for="image">Title image</label>
+            <input type="file" name="image">
+        </div>
+
+        <!-- <div class="col-md-10"> <label for="title">Category</label>
+            <input type="text" name="category" placeholder="category" class="bg-light form-control">
+        </div> -->
+
+        <div class="col-md-10 pt-md-0 pt-3">
+            <button type="submit"><span>Submit</span></button>
+        </div>
+
+    </div>
+
+</form>
+
+</div>

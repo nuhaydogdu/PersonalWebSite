@@ -1,0 +1,31 @@
+<% validation_error.forEach(element => { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>  <%- element.msg  %></strong>   
+        <!-- buradaki .msg kullandığımız validator paketinden geldi  |-validationMiddleware de 1.satır const { body } = require('express-validator')' den geliyor'-->
+        <!-- const { body } = require('express-validator') dokumanında -belirtilen hatalar msg diye bir yapının içerisinde!!-->
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+<% }) %>
+
+<% success_message.forEach(element => { %>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>  <%- element.msg  %></strong>   
+      <!-- buradaki .msg kullandığımız validator paketinden geldi  |-validationMiddleware de 1.satır const { body } = require('express-validator')' den geliyor'-->
+      <!-- const { body } = require('express-validator') dokumanında -belirtilen hatalar msg diye bir yapının içerisinde!!-->
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+<% }) %>
+
+<% login_error.forEach(error => { %>        
+  <!-- error bir diz ve direk olarak aşağıda da içerisindeki değeri yazdırdık  -->
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>  <%- error  %></strong>                               
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% }) %>
